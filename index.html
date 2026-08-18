@@ -393,15 +393,53 @@ cartItems.appendChild(div);
 });
 totalElement.textContent=total;
 }
-function checkout(){
+async function checkout(){
+
 if(cart.length===0){
 alert("Your shopping bag is empty 💕");
 return;
 }
-alert(
-"Checkout is coming next! 💳💕\n\n"+
-"We're going to connect Mhercedis to real payments so customers can place and pay for orders."
+
+const email = prompt("Enter your email address 💕");
+
+if(!email){
+return;
+}
+
+const total = cart.reduce(
+(sum,item)=>sum + (item.price * item.quantity),
+0
 );
+
+try{
+
+const response = await fetch("/api/paystack",{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({
+email:email,
+amount:total
+})
+});
+
+const data = await response.json();
+
+if(data.status && data.data && data.data.authorization_url){
+window.location.href = data.data.authorization_url;
+}else{
+alert("We couldn't start your payment. Please try again 💕");
+}
+
+}catch(error){
+
+console.error(error);
+
+alert("Something went wrong while starting payment. Please try again 💕");
+
+}
+
 }
 </script>
 </body>
