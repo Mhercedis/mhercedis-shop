@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mhercedis | Cute & Feminine</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #fff7fb;
+      color: #3d2632;
+    }
+    header {
+      background: #ffffff;
+      padding: 22px 18px;
+      text-align: center;
+      border-bottom: 1px solid #f2dce7;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #c25b8a;
+    }
+    .tagline {
+      margin-top: 6px;
+      font-size: 13px;
+      color: #8b6877;
+    }
+    .hero {
+      padding: 55px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #ffe5f0, #fff8fb);
+    }
+    .hero h1 {
+      font-size: 38px;
+      margin-bottom: 12px;
+      color: #9e416d;
+    }
+    .hero p {
+      max-width: 500px;
+      margin: auto;
+      line-height: 1.6;
+      color: #705563;
+    }
+    .shop-btn {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 13px 25px;
+      background: #c25b8a;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+    .section {
+      padding: 40px 18px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #9e416d;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .product {
+      background: white;
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 5px 20px rgba(120, 60, 90, 0.08);
+      text-align: center;
+    }
+    .product-image {
+      height: 190px;
+      border-radius: 15px;
+      background: #ffe1ed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 65px;
+      margin-bottom: 15px;
+    }
+    .product h3 {
+      margin-bottom: 8px;
+    }
+    .price {
+      color: #c25b8a;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .add-btn {
+      border: none;
+      background: #c25b8a;
+      color: white;
+      padding: 11px 18px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .cart {
+      background: white;
+      margin-top: 30px;
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(120, 60, 90, 0.08);
+    }
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #f1e1e8;
+    }
+    .total {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 18px;
+      color: #9e416d;
+    }
+    .checkout {
+      margin-top: 18px;
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 30px;
+      background: #222;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .about {
+      text-align: center;
+      line-height: 1.7;
+      max-width: 650px;
+      margin: auto;
+      color: #705563;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      background: #3d2632;
+      color: white;
+      margin-top: 30px;
+    }
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 31px;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">Mhercedis 🎀</div>
+  <div class="tagline">Cute things for your everyday glow ✨</div>
+</header>
+<section class="hero">
+  <h1>Welcome to Mhercedis 💕</h1>
+  <p>
+    Your little corner for cute, feminine and stylish essentials.
+    Find something pretty for yourself or someone you love.
+  </p>
+  <a href="#shop" class="shop-btn">Shop Now 🛍️</a>
+</section>
+<section class="section" id="shop">
+  <h2>Our Cute Collection 🎀</h2>
+  <div class="products">
+    <div class="product">
+      <div class="product-image">👜</div>
+      <h3>Pretty Tote Bag</h3>
+      <div class="price">GH₵ 85</div>
+      <button class="add-btn" onclick="addToCart('Pretty Tote Bag', 85)">
+        Add to Cart
+      </button>
+    </div>
+    <div class="product">
+      <div class="product-image">🎀</div>
+      <h3>Cute Hair Bow</h3>
+      <div class="price">GH₵ 35</div>
+      <button class="add-btn" onclick="addToCart('Cute Hair Bow', 35)">
+        Add to Cart
+      </button>
+    </div>
+    <div class="product">
+      <div class="product-image">💎</div>
+      <h3>Mini Jewelry Set</h3>
+      <div class="price">GH₵ 70</div>
+      <button class="add-btn" onclick="addToCart('Mini Jewelry Set', 70)">
+        Add to Cart
+      </button>
+    </div>
+    <div class="product">
+      <div class="product-image">🧸</div>
+      <h3>Cute Keychain</h3>
+      <div class="price">GH₵ 30</div>
+      <button class="add-btn" onclick="addToCart('Cute Keychain', 30)">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+  <div class="cart">
+    <h2>🛍️ Your Cart</h2>
+    <div id="cartItems">
+      <p>Your cart is empty 💕</p>
+    </div>
+    <div class="total">
+      Total: GH₵ <span id="total">0</span>
+    </div>
+    <button class="checkout" onclick="checkout()">
+      Proceed to Checkout 💳
+    </button>
+  </div>
+</section>
+<section class="section">
+  <h2>About Mhercedis 💕</h2>
+  <p class="about">
+    Mhercedis is a feminine lifestyle shop created for girls who love
+    pretty, useful and stylish little things. 🎀
+    <br><br>
+    Thank you for shopping with us!
+  </p>
+</section>
+<footer>
+  © 2026 Mhercedis 🎀<br>
+  Cute things. Pretty moments. ✨
+</footer>
+<script>
+  let cart = [];
+  let total = 0;
+  function addToCart(name, price) {
+    cart.push({ name: name, price: price });
+    total += price;
+    updateCart();
+    alert(name + " added to your cart 💕");
+  }
+  function updateCart() {
+    const cartItems = document.getElementById("cartItems");
+    const totalElement = document.getElementById("total");
+    if (cart.length === 0) {
+      cartItems.innerHTML = "<p>Your cart is empty 💕</p>";
+    } else {
+      cartItems.innerHTML = "";
+      cart.forEach(function(item, index) {
+        const div = document.createElement("div");
+        div.className = "cart-item";
+        div.innerHTML =
+          "<span>" + item.name + "</span>" +
+          "<span>GH₵ " + item.price + "</span>";
+        cartItems.appendChild(div);
+      });
+    }
+    totalElement.textContent = total;
+  }
+  function checkout() {
+    if (cart.length === 0) {
+      alert("Your cart is empty! Add something cute first 🎀");
+      return;
+    }
+    alert(
+      "Thank you for shopping with Mhercedis! 💕\n\n" +
+      "Your total is GH₵ " + total +
+      ".\n\n" +
+      "Payment setup will be connected here next."
+    );
+  }
+</script>
+</body>
+</html>
