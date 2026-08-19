@@ -420,7 +420,7 @@ headers:{
 },
 body:JSON.stringify({
 email:email,
-amount:total
+amount:Math.round(total * 100)
 })
 });
 
