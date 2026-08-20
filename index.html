@@ -423,24 +423,94 @@ email:email,
 amount:Math.round(total * 100)
 })
 });
+try{
 
-const data = await response.json();
+const paymentNumber = "0502755816";
 
-if(data.status && data.data && data.data.authorization_url){
-window.location.href = data.data.authorization_url;
-}else{
-alert("We couldn't start your payment. Please try again 💕");
+const paymentMessage =
+"Please send GH₵" + total.toFixed(2) +
+" to Telecel Cash number " + paymentNumber +
+". After sending the money, enter your transaction/reference number.";
+
+alert(paymentMessage);
+
+const reference = prompt("Enter your Telecel Cash transaction/reference number:");
+
+if(!reference){
+alert("Please enter your transaction/reference number 💕");
+return;
 }
+
+alert(
+"Order received! 💕\n\n" +
+"Payment reference: " + reference +
+"\n\nWe will confirm your Telecel Cash payment and process your order."
+);
 
 }catch(error){
 
 console.error(error);
 
-alert("Something went wrong while starting payment. Please try again 💕");
+alert("Something went wrong. Please try again 💕");
 
+}try{
+
+const paymentNumber = "0502755816";
+
+const paymentMessage =
+"Please send GH₵" + total.toFixed(2) +
+" to Telecel Cash number " + paymentNumber +
+". After sending the money, enter your transaction/reference number.";
+
+alert(paymentMessage);
+
+const reference = prompt("Enter your Telecel Cash transaction/reference number:");
+
+if(!reference){
+alert("Please enter your transaction/reference number 💕");
+return;
 }
 
+alert(
+"Order received! 💕\n\n" +
+"Payment reference: " + reference +
+"\n\nWe will confirm your Telecel Cash payment and process your order."
+);
+
+}catch(error){
+
+console.error(error);
+
+alert("Something went wrong. Please try again 💕");
+
+}try{
+
+const paymentNumber = "0502755816";
+
+const paymentMessage =
+"Please send GH₵" + total.toFixed(2) +
+" to Telecel Cash number " + paymentNumber +
+". After sending the money, enter your transaction/reference number.";
+
+alert(paymentMessage);
+
+const reference = prompt("Enter your Telecel Cash transaction/reference number:");
+
+if(!reference){
+alert("Please enter your transaction/reference number 💕");
+return;
 }
-</script>
-</body>
-</html>
+
+alert(
+"Order received! 💕\n\n" +
+"Payment reference: " + reference +
+"\n\nWe will confirm your Telecel Cash payment and process your order."
+);
+
+}catch(error){
+
+console.error(error);
+
+alert("Something went wrong. Please try again 💕");
+
+}
