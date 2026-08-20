@@ -383,54 +383,135 @@
     totalElement.textContent =
       total.toFixed(2);
   }
-  function checkout() {
-    if (cart.length === 0) {
-      alert(
-        "Your shopping bag is empty 💕"
-      );
-      return;
-    }
-    const total =
-      cart.reduce(
-        (sum, item) =>
-          sum + (item.price * item.quantity),
-        0
-      );
-    const paymentNumber =
-      "0502755816";
+function checkout() {
+
+  if (cart.length === 0) {
+
     alert(
-      "Your total is GH₵" +
-      total.toFixed(2) +
-      ".\n\n" +
-      "Please send the payment to:\n\n" +
-      "Telecel Cash 📱\n" +
-      paymentNumber +
-      "\n\n" +
-      "After sending the money, tap OK " +
-      "to enter your transaction/reference number."
+      "Your shopping bag is empty 💕"
     );
-    const reference =
-      prompt(
-        "Enter your Telecel Cash transaction/reference number:"
-      );
-    if (!reference) {
-      alert(
-        "Checkout cancelled. Please enter your transaction/reference number 💕"
-      );
-      return;
-    }
-    alert(
-      "Order received! 🎀💕\n\n" +
-      "Total: GH₵" +
-      total.toFixed(2) +
-      "\n\n" +
-      "Payment reference:\n" +
-      reference +
-      "\n\n" +
-      "Thank you for shopping with Mhercedis! 🛍️💕\n\n" +
-      "We will confirm your Telecel Cash payment and process your order."
-    );
+
+    return;
   }
+
+
+  const total = cart.reduce(
+    (sum, item) =>
+      sum + (item.price * item.quantity),
+    0
+  );
+
+
+  const customerName =
+    prompt("Enter your full name 💕");
+
+  if (!customerName) {
+
+    alert(
+      "Please enter your name to continue 💕"
+    );
+
+    return;
+  }
+
+
+  const phone =
+    prompt("Enter your phone number 📱");
+
+  if (!phone) {
+
+    alert(
+      "Please enter your phone number to continue 💕"
+    );
+
+    return;
+  }
+
+
+  const location =
+    prompt("Enter your delivery location 📍");
+
+  if (!location) {
+
+    alert(
+      "Please enter your delivery location to continue 💕"
+    );
+
+    return;
+  }
+
+
+  const paymentNumber =
+    "0502755816";
+
+
+  alert(
+
+    "Hi " + customerName + "! 🎀\n\n" +
+
+    "Your order total is GH₵" +
+    total.toFixed(2) +
+
+    ".\n\n" +
+
+    "Please send GH₵" +
+    total.toFixed(2) +
+
+    " to:\n\n" +
+
+    "Telecel Cash 📱\n" +
+    paymentNumber +
+
+    "\n\n" +
+
+    "After sending the money, tap OK " +
+    "to enter your transaction/reference number."
+
+  );
+
+
+  const reference =
+    prompt(
+      "Enter your Telecel Cash transaction/reference number:"
+    );
+
+
+  if (!reference) {
+
+    alert(
+      "Checkout cancelled. Please enter your transaction/reference number 💕"
+    );
+
+    return;
+  }
+
+
+  alert(
+
+    "ORDER RECEIVED! 🎀💕\n\n" +
+
+    "Customer: " +
+    customerName +
+
+    "\nPhone: " +
+    phone +
+
+    "\nDelivery location: " +
+    location +
+
+    "\n\nTotal: GH₵" +
+    total.toFixed(2) +
+
+    "\n\nPayment reference:\n" +
+    reference +
+
+    "\n\nThank you for shopping with Mhercedis! 🛍️💕\n\n" +
+
+    "We will confirm your Telecel Cash payment and process your order."
+
+  );
+
+}
 </script>
 </body>
 </html>
