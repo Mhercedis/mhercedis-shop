@@ -1,456 +1,475 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mhercedis | Feminine Boutique</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{
-font-family:Georgia,"Times New Roman",serif;
-background:#fffafc;
-color:#30212a;
-}
-header{
-background:#fff;
-padding:20px;
-text-align:center;
-border-bottom:1px solid #ead8df;
-position:sticky;
-top:0;
-z-index:20;
-}
-.logo{
-font-size:30px;
-letter-spacing:2px;
-color:#9d526f;
-font-weight:bold;
-}
-.tagline{
-margin-top:6px;
-font-family:Arial,sans-serif;
-font-size:12px;
-letter-spacing:1px;
-color:#8a707b;
-}
-.hero{
-min-height:520px;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:60px 20px;
-background:linear-gradient(135deg,#f8e1e9,#fffafc 65%);
-}
-.hero-content{max-width:650px}
-.small-title{
-font-family:Arial,sans-serif;
-text-transform:uppercase;
-letter-spacing:3px;
-font-size:12px;
-color:#9d526f;
-margin-bottom:15px;
-}
-.hero h1{
-font-size:52px;
-font-weight:normal;
-line-height:1.05;
-margin-bottom:20px;
-}
-.hero p{
-font-family:Arial,sans-serif;
-color:#705c66;
-line-height:1.7;
-max-width:520px;
-margin:auto;
-}
-.shop-button{
-display:inline-block;
-margin-top:28px;
-padding:14px 30px;
-background:#30212a;
-color:white;
-text-decoration:none;
-border-radius:30px;
-font-family:Arial,sans-serif;
-font-size:14px;
-}
-.section{
-max-width:1050px;
-margin:auto;
-padding:65px 20px;
-}
-.section-heading{
-text-align:center;
-margin-bottom:35px;
-}
-.section-heading span{
-font-family:Arial,sans-serif;
-text-transform:uppercase;
-letter-spacing:2px;
-font-size:11px;
-color:#9d526f;
-}
-.section-heading h2{
-font-size:34px;
-font-weight:normal;
-margin-top:8px;
-}
-.products{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:25px;
-}
-.product{
-background:white;
-border:1px solid #eee1e6;
-padding:15px;
-}
-.product-image{
-height:260px;
-background:#f6e5eb;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:70px;
-margin-bottom:18px;
-}
-.product-info{padding:0 5px 8px}
-.product-name{
-font-size:20px;
-margin-bottom:7px;
-}
-.product-price{
-font-family:Arial,sans-serif;
-color:#9d526f;
-font-weight:bold;
-margin-bottom:15px;
-}
-.add-button{
-width:100%;
-padding:12px;
-border:1px solid #30212a;
-background:white;
-color:#30212a;
-cursor:pointer;
-font-family:Arial,sans-serif;
-}
-.add-button:hover{
-background:#30212a;
-color:white;
-}
-.cart{
-margin-top:45px;
-background:#30212a;
-color:white;
-padding:30px;
-}
-.cart h2{
-font-size:25px;
-font-weight:normal;
-margin-bottom:20px;
-}
-.cart-item{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:15px;
-padding:15px 0;
-border-bottom:1px solid #5b4750;
-font-family:Arial,sans-serif;
-}
-.quantity{
-display:flex;
-align-items:center;
-gap:10px;
-}
-.quantity button{
-width:28px;
-height:28px;
-border:1px solid white;
-background:transparent;
-color:white;
-cursor:pointer;
-border-radius:50%;
-}
-.remove{
-background:none;
-border:none;
-color:#f0c4d2;
-cursor:pointer;
-font-size:12px;
-}
-.cart-total{
-margin-top:25px;
-display:flex;
-justify-content:space-between;
-font-size:20px;
-}
-.checkout{
-width:100%;
-margin-top:20px;
-padding:14px;
-border:none;
-background:#f2ccd9;
-color:#30212a;
-font-weight:bold;
-cursor:pointer;
-}
-.about{
-text-align:center;
-max-width:650px;
-margin:auto;
-font-family:Arial,sans-serif;
-color:#705c66;
-line-height:1.8;
-}
-.contact{
-text-align:center;
-background:#f7e7ed;
-padding:55px 20px;
-}
-.contact h2{
-font-size:30px;
-font-weight:normal;
-margin-bottom:12px;
-}
-.contact p{
-font-family:Arial,sans-serif;
-color:#705c66;
-margin-bottom:20px;
-}
-footer{
-background:#30212a;
-color:white;
-text-align:center;
-padding:28px 15px;
-font-family:Arial,sans-serif;
-font-size:12px;
-line-height:1.7;
-}
-@media(max-width:650px){
-.hero h1{font-size:40px}
-.products{grid-template-columns:1fr}
-.product-image{height:230px}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mhercedis 💕</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff5f8;
+      color: #333;
+    }
+    header {
+      background: #f8b6c8;
+      padding: 25px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 34px;
+      color: white;
+    }
+    header p {
+      color: white;
+      margin-top: 8px;
+    }
+    nav {
+      background: white;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    nav a {
+      text-decoration: none;
+      color: #d95f87;
+      font-weight: bold;
+      margin: 0 12px;
+    }
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .hero h2 {
+      font-size: 32px;
+      color: #d95f87;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 17px;
+      margin-bottom: 25px;
+    }
+    .shop-button {
+      display: inline-block;
+      background: #d95f87;
+      color: white;
+      padding: 13px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section-heading {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .section-heading span {
+      color: #d95f87;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .section-heading h2 {
+      margin-top: 8px;
+      font-size: 28px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .product {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    .product-image {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 70px;
+      background: #ffe3ec;
+    }
+    .product-info {
+      padding: 20px;
+    }
+    .product-name {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .product-price {
+      color: #d95f87;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .add-button {
+      width: 100%;
+      border: none;
+      background: #d95f87;
+      color: white;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .add-button:active {
+      transform: scale(0.98);
+    }
+    .cart {
+      background: white;
+      margin-top: 40px;
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    .cart h2 {
+      color: #d95f87;
+      margin-bottom: 20px;
+    }
+    .cart-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .quantity {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .quantity button {
+      border: none;
+      background: #ffe3ec;
+      color: #d95f87;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .remove {
+      border: none;
+      background: #ff6b81;
+      color: white;
+      padding: 7px 10px;
+      border-radius: 7px;
+      cursor: pointer;
+    }
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 2px solid #ffe3ec;
+      font-size: 20px;
+    }
+    .checkout {
+      width: 100%;
+      margin-top: 20px;
+      padding: 15px;
+      border: none;
+      border-radius: 12px;
+      background: #d95f87;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .about {
+      background: white;
+      padding: 25px;
+      border-radius: 18px;
+      line-height: 1.7;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+    footer {
+      background: #d95f87;
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
+      margin-top: 40px;
+    }
+    @media (max-width: 600px) {
+      .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .quantity {
+        margin-top: 5px;
+      }
+      .remove {
+        margin-top: 5px;
+      }
+    }
+  </style>
 </head>
 <body>
-<header>
-<div class="logo">Mhercedis 🎀</div>
-<div class="tagline">Cute things for your everyday glow ✨</div>
-</header>
-<section class="hero">
-<div class="hero-content">
-<div class="small-title">Welcome to Mhercedis</div>
-<h1>Pretty things.<br>Pretty moments.</h1>
-<p>
-A feminine little boutique filled with cute, stylish and
-everyday essentials made for you.
-</p>
-<a class="shop-button" href="#shop">Shop the collection</a>
-</div>
-</section>
-<section class="section" id="shop">
-<div class="section-heading">
-<span>Our collection</span>
-<h2>Shop your favorites</h2>
-</div>
-<div class="products">
-<div class="product">
-<div class="product-image">👜</div>
-<div class="product-info">
-<div class="product-name">Pretty Tote Bag</div>
-<div class="product-price">GH₵ 85</div>
-<button class="add-button" onclick="addToCart('Pretty Tote Bag',85)">
-Add to bag
-</button>
-</div>
-</div>
-<div class="product">
-<div class="product-image">🎀</div>
-<div class="product-info">
-<div class="product-name">Cute Hair Bow</div>
-<div class="product-price">GH₵ 35</div>
-<button class="add-button" onclick="addToCart('Cute Hair Bow',35)">
-Add to bag
-</button>
-</div>
-</div>
-<div class="product">
-<div class="product-image">💎</div>
-<div class="product-info">
-<div class="product-name">Mini Jewelry Set</div>
-<div class="product-price">GH₵ 70</div>
-<button class="add-button" onclick="addToCart('Mini Jewelry Set',70)">
-Add to bag
-</button>
-</div>
-</div>
-<div class="product">
-<div class="product-image">🧸</div>
-<div class="product-info">
-<div class="product-name">Cute Keychain</div>
-<div class="product-price">GH₵ 30</div>
-<button class="add-button" onclick="addToCart('Cute Keychain',30)">
-Add to bag
-</button>
-</div>
-</div>
-</div>
-<div class="cart">
-<h2>Your shopping bag 🛍️</h2>
-<div id="cartItems">
-<p>Your bag is empty 💕</p>
-</div>
-<div class="cart-total">
-<span>Total</span>
-<strong>GH₵ <span id="total">0</span></strong>
-</div>
-<button class="checkout" onclick="checkout()">
-Continue to checkout
-</button>
-</div>
-</section>
-<section class="section">
-<div class="section-heading">
-<span>Our story</span>
-<h2>About Mhercedis</h2>
-</div>
-<p class="about">
-Mhercedis is a feminine lifestyle boutique created for girls
-who love pretty, useful and stylish little things.
-<br><br>
-Whether you're treating yourself or finding a little gift,
-we hope you find something that makes you smile. 🎀
-</p>
-</section>
-<section class="contact">
-<h2>Let's stay connected 💕</h2>
-<p>
-Have a question about an item or an order?
-We'd love to hear from you.
-</p>
-<p>
-More contact and social links coming soon ✨
-</p>
-</section>
-<footer>
-© 2026 Mhercedis 🎀<br>
-Pretty things. Pretty moments.
-</footer>
-<script>
-let cart=[];
-function addToCart(name,price){
-const existing=cart.find(item=>item.name===name);
-if(existing){
-existing.quantity++;
-}else{
-cart.push({name:name,price:price,quantity:1});
-}
-updateCart();
-}
-function changeQuantity(index,amount){
-cart[index].quantity+=amount;
-if(cart[index].quantity<=0){
-cart.splice(index,1);
-}
-updateCart();
-}
-function removeItem(index){
-cart.splice(index,1);
-updateCart();
-}
-function updateCart(){
-const cartItems=document.getElementById("cartItems");
-const totalElement=document.getElementById("total");
-if(cart.length===0){
-cartItems.innerHTML="<p>Your bag is empty 💕</p>";
-totalElement.textContent="0";
-return;
-}
-let total=0;
-cartItems.innerHTML="";
-cart.forEach((item,index)=>{
-total+=item.price*item.quantity;
-const div=document.createElement("div");
-div.className="cart-item";
-div.innerHTML=`
-<div>
-<strong>${item.name}</strong><br>
-GH₵ ${item.price} each
-</div>
-<div class="quantity">
-<button onclick="changeQuantity(${index},-1)">−</button>
-<span>${item.quantity}</span>
-<button onclick="changeQuantity(${index},1)">+</button>
-</div>
-<button class="remove" onclick="removeItem(${index})">
-Remove
-</button>
-`;
-cartItems.appendChild(div);
-});
-totalElement.textContent=total;
-}
-async function checkout(){
-
-if(cart.length===0){
-alert("Your shopping bag is empty 💕");
-return;
-}
-
-const email = prompt("Enter your email address 💕");
-
-if(!email){
-return;
-}
-
-const total = cart.reduce(
-(sum,item)=>sum + (item.price * item.quantity),
-0
-);
-
-try{
-
-const response = await fetch("/api/paystack",{
-method:"POST",
-headers:{
-"Content-Type":"application/json"
-},
-body:JSON.stringify({
-email:email,
-amount:Math.round(total * 100)
-})
-});
-try{
-
-const paymentNumber = "0502755816";
-
-const paymentMessage =
-"Please send GH₵" + total.toFixed(2) +
-" to Telecel Cash number " + paymentNumber +
-". After sending the money, enter your transaction/reference number.";
-
-alert(paymentMessage);
-
-const reference = prompt("Enter your Telecel Cash transaction/reference number:");
-
-if(!reference){
-alert("Please enter your transaction/reference number 💕");
-return;
-}
-
-alert(
-"Order received! 💕\n\n" +
-"Payment reference: " + reference +
-"\n\nWe will confirm your Telecel Cash payment and process your order."
-);
-
-}catch(error){
-
-console.error(error);
-
-alert("Something went wrong. Please try again 💕");
-
-}
+  <header>
+    <h1>Mhercedis 🎀</h1>
+    <p>Cute little things made for you 💕</p>
+  </header>
+  <nav>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#bag">Bag 🛍️</a>
+  </nav>
+  <section class="hero">
+    <h2>Welcome to Mhercedis 💕</h2>
+    <p>Shop cute, feminine and lovely items you'll adore.</p>
+    <a href="#shop" class="shop-button">Shop now 🎀</a>
+  </section>
+  <section class="section" id="shop">
+    <div class="section-heading">
+      <span>OUR COLLECTION</span>
+      <h2>Shop our cute items 💕</h2>
+    </div>
+    <div class="products">
+      <div class="product">
+        <div class="product-image">👜</div>
+        <div class="product-info">
+          <div class="product-name">Cute Tote Bag</div>
+          <div class="product-price">GH₵ 80</div>
+          <button
+            class="add-button"
+            onclick="addToCart('Cute Tote Bag', 80)">
+            Add to bag
+          </button>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-image">🎀</div>
+        <div class="product-info">
+          <div class="product-name">Cute Hair Bow</div>
+          <div class="product-price">GH₵ 35</div>
+          <button
+            class="add-button"
+            onclick="addToCart('Cute Hair Bow', 35)">
+            Add to bag
+          </button>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-image">💎</div>
+        <div class="product-info">
+          <div class="product-name">Mini Jewelry Set</div>
+          <div class="product-price">GH₵ 70</div>
+          <button
+            class="add-button"
+            onclick="addToCart('Mini Jewelry Set', 70)">
+            Add to bag
+          </button>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-image">🧸</div>
+        <div class="product-info">
+          <div class="product-name">Cute Keychain</div>
+          <div class="product-price">GH₵ 30</div>
+          <button
+            class="add-button"
+            onclick="addToCart('Cute Keychain', 30)">
+            Add to bag
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="cart" id="bag">
+      <h2>Your shopping bag 🛍️</h2>
+      <div id="cartItems">
+        <p>Your bag is empty 💕</p>
+      </div>
+      <div class="cart-total">
+        <span>Total</span>
+        <strong>
+          GH₵ <span id="total">0.00</span>
+        </strong>
+      </div>
+      <button class="checkout" onclick="checkout()">
+        Continue to checkout
+      </button>
+    </div>
+  </section>
+  <section class="section" id="about">
+    <div class="section-heading">
+      <span>GET TO KNOW US</span>
+      <h2>About Mhercedis 💕</h2>
+    </div>
+    <p class="about">
+      Welcome to Mhercedis 🎀 — your cute little shop for feminine,
+      stylish and lovely everyday items. Everything is picked with love
+      to add a little extra sweetness to your day. 💕
+    </p>
+  </section>
+  <footer>
+    <p>© 2026 Mhercedis 🎀</p>
+    <p>Made with love 💕</p>
+  </footer>
+  <script>
+    let cart = [];
+    function addToCart(name, price) {
+      const existing = cart.find(
+        item => item.name === name
+      );
+      if (existing) {
+        existing.quantity++;
+      } else {
+        cart.push({
+          name: name,
+          price: price,
+          quantity: 1
+        });
+      }
+      updateCart();
+    }
+    function changeQuantity(index, amount) {
+      cart[index].quantity += amount;
+      if (cart[index].quantity <= 0) {
+        cart.splice(index, 1);
+      }
+      updateCart();
+    }
+    function removeItem(index) {
+      cart.splice(index, 1);
+      updateCart();
+    }
+    function updateCart() {
+      const cartItems =
+        document.getElementById("cartItems");
+      const totalElement =
+        document.getElementById("total");
+      if (cart.length === 0) {
+        cartItems.innerHTML =
+          "<p>Your bag is empty 💕</p>";
+        totalElement.textContent = "0.00";
+        return;
+      }
+      let total = 0;
+      cartItems.innerHTML = "";
+      cart.forEach((item, index) => {
+        total += item.price * item.quantity;
+        const div =
+          document.createElement("div");
+        div.className = "cart-item";
+        div.innerHTML = `
+          <div>
+            <strong>${item.name}</strong>
+            <br>
+            GH₵ ${item.price.toFixed(2)} each
+          </div>
+          <div class="quantity">
+            <button
+              onclick="changeQuantity(${index}, -1)">
+              −
+            </button>
+            <span>${item.quantity}</span>
+            <button
+              onclick="changeQuantity(${index}, 1)">
+              +
+            </button>
+          </div>
+          <button
+            class="remove"
+            onclick="removeItem(${index})">
+            Remove
+          </button>
+        `;
+        cartItems.appendChild(div);
+      });
+      totalElement.textContent =
+        total.toFixed(2);
+    }
+    async function checkout() {
+      if (cart.length === 0) {
+        alert(
+          "Your shopping bag is empty 💕"
+        );
+        return;
+      }
+      const email =
+        prompt("Enter your email address 💕");
+      if (!email) {
+        return;
+      }
+      const total = cart.reduce(
+        (sum, item) =>
+          sum + (item.price * item.quantity),
+        0
+      );
+      try {
+        const response =
+          await fetch("/api/paystack", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              email: email,
+              amount:
+                Math.round(total * 100)
+            })
+          });
+        const data =
+          await response.json();
+        if (
+          data.status &&
+          data.data &&
+          data.data.authorization_url
+        ) {
+          window.location.href =
+            data.data.authorization_url;
+          return;
+        }
+        /*
+          If Paystack does not start,
+          show Telecel Cash instructions.
+        */
+        const paymentNumber =
+          "0502755816";
+        const paymentMessage =
+          "Please send GH₵" +
+          total.toFixed(2) +
+          " to Telecel Cash number " +
+          paymentNumber +
+          ". After sending the money, enter your transaction/reference number.";
+        alert(paymentMessage);
+        const reference =
+          prompt(
+            "Enter your Telecel Cash transaction/reference number:"
+          );
+        if (!reference) {
+          alert(
+            "Please enter your transaction/reference number 💕"
+          );
+          return;
+        }
+        alert(
+          "Order received! 💕\n\n" +
+          "Payment reference: " +
+          reference +
+          "\n\n" +
+          "We will confirm your Telecel Cash payment and process your order."
+        );
+      } catch (error) {
+        console.error(error);
+        alert(
+          "Something went wrong. Please try again 💕"
+        );
+      }
+    }
+  </script>
+</body>
+</html>
