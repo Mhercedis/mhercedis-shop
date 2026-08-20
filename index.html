@@ -1,96 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
   <title>Mhercedis Shop 🎀</title>
+
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     body {
       font-family: Arial, sans-serif;
       background: #fff5f8;
       color: #333;
     }
+
     header {
       background: #f8b6c8;
-      padding: 28px 20px;
+      padding: 30px 20px;
       text-align: center;
     }
+
     header h1 {
       color: white;
-      font-size: 35px;
+      font-size: 36px;
     }
+
     header p {
       color: white;
       margin-top: 8px;
     }
+
     nav {
       background: white;
       padding: 15px;
       text-align: center;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
+
     nav a {
       color: #d95f87;
       text-decoration: none;
       font-weight: bold;
       margin: 0 10px;
     }
+
     .hero {
       text-align: center;
-      padding: 50px 20px;
+      padding: 55px 20px;
     }
+
     .hero h2 {
       color: #d95f87;
       font-size: 32px;
       margin-bottom: 15px;
     }
+
     .hero p {
       margin-bottom: 25px;
       font-size: 17px;
     }
+
     .shop-button {
       display: inline-block;
       background: #d95f87;
       color: white;
-      padding: 13px 25px;
+      padding: 14px 28px;
       border-radius: 25px;
       text-decoration: none;
       font-weight: bold;
     }
+
     .section {
       max-width: 1000px;
       margin: auto;
       padding: 40px 20px;
     }
+
     .section-heading {
       text-align: center;
       margin-bottom: 30px;
     }
+
     .section-heading span {
       color: #d95f87;
       font-size: 14px;
       font-weight: bold;
     }
+
     .section-heading h2 {
       margin-top: 8px;
       font-size: 28px;
     }
+
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
     }
+
     .product {
       background: white;
       border-radius: 18px;
       overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      box-shadow:
+        0 4px 15px rgba(0,0,0,0.08);
     }
+
     .product-image {
       height: 180px;
       display: flex;
@@ -99,19 +130,23 @@
       background: #ffe3ec;
       font-size: 70px;
     }
+
     .product-info {
       padding: 20px;
     }
+
     .product-name {
       font-size: 18px;
       font-weight: bold;
       margin-bottom: 8px;
     }
+
     .product-price {
       color: #d95f87;
       font-weight: bold;
       margin-bottom: 15px;
     }
+
     .add-button {
       width: 100%;
       border: none;
@@ -123,17 +158,26 @@
       font-weight: bold;
       cursor: pointer;
     }
+
+    .add-button:active,
+    .checkout:active {
+      transform: scale(0.98);
+    }
+
     .cart {
       background: white;
       margin-top: 40px;
       padding: 25px;
       border-radius: 18px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      box-shadow:
+        0 4px 15px rgba(0,0,0,0.08);
     }
+
     .cart h2 {
       color: #d95f87;
       margin-bottom: 20px;
     }
+
     .cart-item {
       display: flex;
       align-items: center;
@@ -142,29 +186,33 @@
       padding: 15px 0;
       border-bottom: 1px solid #eee;
     }
+
     .quantity {
       display: flex;
       align-items: center;
       gap: 10px;
     }
+
     .quantity button {
       border: none;
       background: #ffe3ec;
       color: #d95f87;
-      width: 30px;
-      height: 30px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       font-size: 18px;
       cursor: pointer;
     }
+
     .remove {
       border: none;
       background: #ff6b81;
       color: white;
-      padding: 7px 10px;
+      padding: 8px 11px;
       border-radius: 7px;
       cursor: pointer;
     }
+
     .cart-total {
       display: flex;
       justify-content: space-between;
@@ -173,6 +221,7 @@
       border-top: 2px solid #ffe3ec;
       font-size: 20px;
     }
+
     .checkout {
       width: 100%;
       margin-top: 20px;
@@ -185,14 +234,30 @@
       font-weight: bold;
       cursor: pointer;
     }
+
+    .delivery-info {
+      background: #fff0f5;
+      padding: 18px;
+      border-radius: 12px;
+      margin-top: 25px;
+      line-height: 1.7;
+    }
+
+    .delivery-info h3 {
+      color: #d95f87;
+      margin-bottom: 8px;
+    }
+
     .about {
       background: white;
       padding: 25px;
       border-radius: 18px;
       line-height: 1.7;
       text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      box-shadow:
+        0 4px 15px rgba(0,0,0,0.06);
     }
+
     footer {
       background: #d95f87;
       color: white;
@@ -200,287 +265,860 @@
       padding: 25px 20px;
       margin-top: 40px;
     }
+
     @media (max-width: 600px) {
+
+      header h1 {
+        font-size: 30px;
+      }
+
+      .hero h2 {
+        font-size: 27px;
+      }
+
       .cart-item {
         flex-direction: column;
         align-items: flex-start;
       }
+
+      .quantity {
+        margin-top: 5px;
+      }
+
+      .remove {
+        margin-top: 5px;
+      }
+
     }
+
   </style>
+
 </head>
+
+
 <body>
+
+
 <header>
+
   <h1>Mhercedis 🎀</h1>
-  <p>Cute little things made for you 💕</p>
+
+  <p>
+    Cute little things made for you 💕
+  </p>
+
 </header>
+
+
 <nav>
+
   <a href="#shop">Shop</a>
+
   <a href="#about">About</a>
+
   <a href="#bag">Bag 🛍️</a>
+
 </nav>
+
+
 <section class="hero">
-  <h2>Welcome to Mhercedis 💕</h2>
-  <p>Shop cute, feminine and lovely items you'll adore.</p>
-  <a href="#shop" class="shop-button">Shop now 🎀</a>
+
+  <h2>
+    Welcome to Mhercedis 💕
+  </h2>
+
+  <p>
+    Cute, feminine and lovely items
+    made to brighten your day.
+  </p>
+
+  <a
+    href="#shop"
+    class="shop-button"
+  >
+    Shop now 🎀
+  </a>
+
 </section>
-<section class="section" id="shop">
+
+
+<section
+  class="section"
+  id="shop"
+>
+
+
   <div class="section-heading">
-    <span>OUR COLLECTION</span>
-    <h2>Shop our cute items 💕</h2>
+
+    <span>
+      OUR COLLECTION
+    </span>
+
+    <h2>
+      Shop our cute items 💕
+    </h2>
+
   </div>
+
+
   <div class="products">
+
+
     <div class="product">
-      <div class="product-image">👜</div>
+
+      <div class="product-image">
+        👜
+      </div>
+
       <div class="product-info">
-        <div class="product-name">Cute Tote Bag</div>
-        <div class="product-price">GH₵ 80</div>
+
+        <div class="product-name">
+          Cute Tote Bag
+        </div>
+
+        <div class="product-price">
+          GH₵ 80
+        </div>
+
         <button
           class="add-button"
-          onclick="addToCart('Cute Tote Bag', 80)">
+          onclick="addToCart('Cute Tote Bag', 80)"
+        >
           Add to bag
         </button>
+
       </div>
+
     </div>
+
+
     <div class="product">
-      <div class="product-image">🎀</div>
+
+      <div class="product-image">
+        🎀
+      </div>
+
       <div class="product-info">
-        <div class="product-name">Cute Hair Bow</div>
-        <div class="product-price">GH₵ 35</div>
+
+        <div class="product-name">
+          Cute Hair Bow
+        </div>
+
+        <div class="product-price">
+          GH₵ 35
+        </div>
+
         <button
           class="add-button"
-          onclick="addToCart('Cute Hair Bow', 35)">
+          onclick="addToCart('Cute Hair Bow', 35)"
+        >
           Add to bag
         </button>
+
       </div>
+
     </div>
+
+
     <div class="product">
-      <div class="product-image">💎</div>
+
+      <div class="product-image">
+        💎
+      </div>
+
       <div class="product-info">
-        <div class="product-name">Mini Jewelry Set</div>
-        <div class="product-price">GH₵ 70</div>
+
+        <div class="product-name">
+          Mini Jewelry Set
+        </div>
+
+        <div class="product-price">
+          GH₵ 70
+        </div>
+
         <button
           class="add-button"
-          onclick="addToCart('Mini Jewelry Set', 70)">
+          onclick="addToCart('Mini Jewelry Set', 70)"
+        >
           Add to bag
         </button>
+
       </div>
+
     </div>
+
+
     <div class="product">
-      <div class="product-image">🧸</div>
+
+      <div class="product-image">
+        🧸
+      </div>
+
       <div class="product-info">
-        <div class="product-name">Cute Keychain</div>
-        <div class="product-price">GH₵ 30</div>
+
+        <div class="product-name">
+          Cute Keychain
+        </div>
+
+        <div class="product-price">
+          GH₵ 30
+        </div>
+
         <button
           class="add-button"
-          onclick="addToCart('Cute Keychain', 30)">
+          onclick="addToCart('Cute Keychain', 30)"
+        >
           Add to bag
         </button>
+
       </div>
+
     </div>
+
+
   </div>
-  <div class="cart" id="bag">
-    <h2>Your shopping bag 🛍️</h2>
+
+
+  <div
+    class="cart"
+    id="bag"
+  >
+
+    <h2>
+      Your shopping bag 🛍️
+    </h2>
+
+
     <div id="cartItems">
-      <p>Your bag is empty 💕</p>
+
+      <p>
+        Your bag is empty 💕
+      </p>
+
     </div>
+
+
     <div class="cart-total">
-      <span>Total</span>
+
+      <span>
+        Total
+      </span>
+
       <strong>
-        GH₵ <span id="total">0.00</span>
+        GH₵
+        <span id="total">
+          0.00
+        </span>
       </strong>
+
     </div>
-    <button class="checkout" onclick="checkout()">
+
+
+    <button
+      class="checkout"
+      onclick="checkout()"
+    >
       Continue to checkout
     </button>
+
+
+    <div class="delivery-info">
+
+      <h3>
+        🚚 Delivery
+      </h3>
+
+      <p>
+        Inside Suhum:
+        <strong>GH₵15</strong>
+      </p>
+
+      <p>
+        Outside Suhum:
+        <strong>GH₵30</strong>
+      </p>
+
+    </div>
+
+
   </div>
+
+
 </section>
-<section class="section" id="about">
+
+
+<section
+  class="section"
+  id="about"
+>
+
+
   <div class="section-heading">
-    <span>GET TO KNOW US</span>
-    <h2>About Mhercedis 💕</h2>
+
+    <span>
+      GET TO KNOW US
+    </span>
+
+    <h2>
+      About Mhercedis 💕
+    </h2>
+
   </div>
+
+
   <p class="about">
-    Welcome to Mhercedis 🎀 — your cute little shop for feminine,
-    stylish and lovely everyday items. Everything is picked with love
-    to add a little extra sweetness to your day. 💕
+
+    Welcome to Mhercedis 🎀 —
+    your cute little shop for
+    feminine, stylish and lovely
+    everyday items.
+
+    Everything is picked with love
+    to add a little extra sweetness
+    to your day. 💕
+
   </p>
+
+
 </section>
+
+
 <footer>
-  <p>© 2026 Mhercedis 🎀</p>
-  <p>Made with love 💕</p>
+
+  <p>
+    © 2026 Mhercedis 🎀
+  </p>
+
+  <p>
+    Made with love 💕
+  </p>
+
 </footer>
+
+
 <script>
-  let cart = [];
-  function addToCart(name, price) {
-    const existing =
-      cart.find(item => item.name === name);
-    if (existing) {
-      existing.quantity++;
-    } else {
-      cart.push({
-        name: name,
-        price: price,
-        quantity: 1
-      });
-    }
-    updateCart();
-  }
-  function changeQuantity(index, amount) {
-    cart[index].quantity += amount;
-    if (cart[index].quantity <= 0) {
-      cart.splice(index, 1);
-    }
-    updateCart();
-  }
-  function removeItem(index) {
-    cart.splice(index, 1);
-    updateCart();
-  }
-  function updateCart() {
-    const cartItems =
-      document.getElementById("cartItems");
-    const totalElement =
-      document.getElementById("total");
-    if (cart.length === 0) {
-      cartItems.innerHTML =
-        "<p>Your bag is empty 💕</p>";
-      totalElement.textContent = "0.00";
-      return;
-    }
-    let total = 0;
-    cartItems.innerHTML = "";
-    cart.forEach((item, index) => {
-      total +=
-        item.price * item.quantity;
-      const div =
-        document.createElement("div");
-      div.className = "cart-item";
-      div.innerHTML = `
-        <div>
-          <strong>${item.name}</strong>
-          <br>
-          GH₵ ${item.price.toFixed(2)} each
-        </div>
-        <div class="quantity">
-          <button
-            onclick="changeQuantity(${index}, -1)">
-            −
-          </button>
-          <span>${item.quantity}</span>
-          <button
-            onclick="changeQuantity(${index}, 1)">
-            +
-          </button>
-        </div>
-        <button
-          class="remove"
-          onclick="removeItem(${index})">
-          Remove
-        </button>
-      `;
-      cartItems.appendChild(div);
+
+
+let cart = [];
+
+
+function addToCart(name, price) {
+
+  const existing =
+    cart.find(
+      item => item.name === name
+    );
+
+
+  if (existing) {
+
+    existing.quantity++;
+
+  } else {
+
+    cart.push({
+
+      name: name,
+
+      price: price,
+
+      quantity: 1
+
     });
-    totalElement.textContent =
-      total.toFixed(2);
+
   }
-function checkout() {
+
+
+  updateCart();
+
+}
+
+
+function changeQuantity(index, amount) {
+
+  cart[index].quantity += amount;
+
+
+  if (
+    cart[index].quantity <= 0
+  ) {
+
+    cart.splice(index, 1);
+
+  }
+
+
+  updateCart();
+
+}
+
+
+function removeItem(index) {
+
+  cart.splice(index, 1);
+
+  updateCart();
+
+}
+
+
+function updateCart() {
+
+  const cartItems =
+    document.getElementById(
+      "cartItems"
+    );
+
+
+  const totalElement =
+    document.getElementById(
+      "total"
+    );
+
 
   if (cart.length === 0) {
-    alert("Your shopping bag is empty 💕");
+
+    cartItems.innerHTML =
+      "<p>Your bag is empty 💕</p>";
+
+    totalElement.textContent =
+      "0.00";
+
     return;
+
   }
 
-  const total = cart.reduce(
-    (sum, item) => sum + (item.price * item.quantity),
-    0
+
+  let total = 0;
+
+
+  cartItems.innerHTML = "";
+
+
+  cart.forEach(
+    (item, index) => {
+
+      total +=
+        item.price *
+        item.quantity;
+
+
+      const div =
+        document.createElement(
+          "div"
+        );
+
+
+      div.className =
+        "cart-item";
+
+
+      div.innerHTML = `
+
+        <div>
+
+          <strong>
+            ${item.name}
+          </strong>
+
+          <br>
+
+          GH₵
+          ${item.price.toFixed(2)}
+          each
+
+        </div>
+
+
+        <div class="quantity">
+
+          <button
+            onclick="changeQuantity(
+              ${index}, -1
+            )"
+          >
+            −
+          </button>
+
+
+          <span>
+            ${item.quantity}
+          </span>
+
+
+          <button
+            onclick="changeQuantity(
+              ${index}, 1
+            )"
+          >
+            +
+          </button>
+
+        </div>
+
+
+        <button
+          class="remove"
+          onclick="removeItem(
+            ${index}
+          )"
+        >
+          Remove
+        </button>
+
+      `;
+
+
+      cartItems.appendChild(
+        div
+      );
+
+    }
   );
 
-  const customerName = prompt("Enter your full name 💕");
+
+  totalElement.textContent =
+    total.toFixed(2);
+
+}
+
+
+function checkout() {
+
+
+  if (cart.length === 0) {
+
+    alert(
+      "Your shopping bag is empty 💕"
+    );
+
+    return;
+
+  }
+
+
+  const productTotal =
+    cart.reduce(
+
+      (sum, item) =>
+
+        sum +
+        (
+          item.price *
+          item.quantity
+        ),
+
+      0
+
+    );
+
+
+  const customerName =
+    prompt(
+      "Enter your full name 💕"
+    );
+
 
   if (!customerName) {
-    alert("Please enter your name to continue 💕");
+
+    alert(
+      "Please enter your name to continue 💕"
+    );
+
     return;
+
   }
 
-  const phone = prompt("Enter your phone number 📱");
+
+  const phone =
+    prompt(
+      "Enter your phone number 📱"
+    );
+
 
   if (!phone) {
-    alert("Please enter your phone number to continue 💕");
+
+    alert(
+      "Please enter your phone number to continue 💕"
+    );
+
     return;
+
   }
 
-  const location = prompt("Enter your delivery location 📍");
+
+  const location =
+    prompt(
+
+      "Enter your delivery location 📍\n\n" +
+
+      "Please include your town or area."
+
+    );
+
 
   if (!location) {
-    alert("Please enter your delivery location to continue 💕");
-    return;
-  }
 
-  const paymentNumber = "0502755816";
-
-  alert(
-    "Your total is GH₵" +
-    total.toFixed(2) +
-    ".\n\n" +
-    "Please send GH₵" +
-    total.toFixed(2) +
-    " to:\n\n" +
-    "Telecel Cash 📱\n" +
-    paymentNumber +
-    "\n\n" +
-    "After sending the money, tap OK to enter your transaction/reference number."
-  );
-
-  const reference = prompt(
-    "Enter your Telecel Cash transaction/reference number:"
-  );
-
-  if (!reference) {
     alert(
-      "Checkout cancelled. Please enter your transaction/reference number 💕"
+      "Please enter your delivery location to continue 💕"
     );
+
     return;
+
   }
+
+
+  const deliveryChoice =
+    prompt(
+
+      "Choose your delivery option 🚚\n\n" +
+
+      "1 = Inside Suhum — GH₵15\n" +
+
+      "2 = Outside Suhum — GH₵30\n\n" +
+
+      "Enter 1 or 2:"
+
+    );
+
+
+  let deliveryFee;
+
+
+  if (
+    deliveryChoice === "1"
+  ) {
+
+    deliveryFee = 15;
+
+  }
+
+  else if (
+    deliveryChoice === "2"
+  ) {
+
+    deliveryFee = 30;
+
+  }
+
+  else {
+
+    alert(
+
+      "Please enter 1 for Inside Suhum " +
+      "or 2 for Outside Suhum 💕"
+
+    );
+
+    return;
+
+  }
+
+
+  const finalTotal =
+    productTotal +
+    deliveryFee;
+
 
   let orderItems = "";
 
-  cart.forEach((item) => {
-    orderItems +=
-      "• " +
-      item.name +
-      " x" +
-      item.quantity +
-      " — GH₵" +
-      (item.price * item.quantity).toFixed(2) +
-      "\n";
-  });
 
-  const message =
-    "🛍️ *NEW MHER CEDIS ORDER* 🎀\n\n" +
-    "*Customer:* " + customerName + "\n" +
-    "*Phone:* " + phone + "\n" +
-    "*Delivery location:* " + location + "\n\n" +
-    "*ORDER:*\n" +
-    orderItems +
-    "\n*TOTAL:* GH₵" + total.toFixed(2) +
-    "\n\n" +
-    "*Telecel Cash:* " + paymentNumber +
-    "\n" +
-    "*Payment reference:* " + reference +
-    "\n\n" +
-    "Please confirm payment and process this order. 💕";
+  cart.forEach(
+    item => {
 
-  const whatsappURL =
-    "https://wa.me/233502755816?text=" +
-    encodeURIComponent(message);
+      orderItems +=
 
-  alert(
-    "Order received! 🎀💕\n\n" +
-    "Your order details will now open in WhatsApp."
+        "• " +
+
+        item.name +
+
+        " x" +
+
+        item.quantity +
+
+        " — GH₵" +
+
+        (
+          item.price *
+          item.quantity
+        ).toFixed(2) +
+
+        "\n";
+
+    }
   );
 
-  window.location.href = whatsappURL;
+
+  const deliveryType =
+
+    deliveryChoice === "1"
+
+      ? "Inside Suhum"
+
+      : "Outside Suhum";
+
+
+  const paymentNumber =
+    "0502755816";
+
+
+  alert(
+
+    "ORDER SUMMARY 🎀\n\n" +
+
+    "Products: GH₵" +
+
+    productTotal.toFixed(2) +
+
+    "\n" +
+
+    "Delivery: GH₵" +
+
+    deliveryFee.toFixed(2) +
+
+    "\n\n" +
+
+    "TOTAL TO PAY: GH₵" +
+
+    finalTotal.toFixed(2) +
+
+    "\n\n" +
+
+    "Please send GH₵" +
+
+    finalTotal.toFixed(2) +
+
+    " to:\n\n" +
+
+    "Telecel Cash 📱\n" +
+
+    paymentNumber +
+
+    "\n\n" +
+
+    "After sending the money, tap OK " +
+
+    "to enter your transaction/reference number."
+
+  );
+
+
+  const reference =
+    prompt(
+
+      "Enter your Telecel Cash " +
+      "transaction/reference number:"
+
+    );
+
+
+  if (!reference) {
+
+    alert(
+
+      "Checkout cancelled. " +
+      "Please enter your transaction/reference number 💕"
+
+    );
+
+    return;
+
+  }
+
+
+  const message =
+
+    "🛍️ *NEW MHER CEDIS ORDER* 🎀\n\n" +
+
+    "*Customer:* " +
+    customerName +
+
+    "\n" +
+
+    "*Phone:* " +
+    phone +
+
+    "\n" +
+
+    "*Delivery location:* " +
+    location +
+
+    "\n" +
+
+    "*Delivery option:* " +
+    deliveryType +
+
+    "\n" +
+
+    "*Delivery fee:* GH₵" +
+    deliveryFee.toFixed(2) +
+
+    "\n\n" +
+
+    "*ORDER:*\n" +
+
+    orderItems +
+
+    "\n" +
+
+    "*Products total:* GH₵" +
+    productTotal.toFixed(2) +
+
+    "\n" +
+
+    "*Delivery:* GH₵" +
+    deliveryFee.toFixed(2) +
+
+    "\n" +
+
+    "*FINAL TOTAL:* GH₵" +
+    finalTotal.toFixed(2) +
+
+    "\n\n" +
+
+    "*Telecel Cash:* " +
+    paymentNumber +
+
+    "\n" +
+
+    "*Payment reference:* " +
+    reference +
+
+    "\n\n" +
+
+    "Please confirm payment " +
+    "and process this order. 💕";
+
+
+  const whatsappURL =
+
+    "https://wa.me/233502755816?text=" +
+
+    encodeURIComponent(
+      message
+    );
+
+
+  alert(
+
+    "Order received! 🎀💕\n\n" +
+
+    "Your complete order " +
+    "will now open in WhatsApp."
+
+  );
+
+
+  window.location.href =
+    whatsappURL;
+
+
 }
+
+
 </script>
+
+
 </body>
+
 </html>
