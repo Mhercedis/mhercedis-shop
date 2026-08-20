@@ -386,131 +386,100 @@
 function checkout() {
 
   if (cart.length === 0) {
-
-    alert(
-      "Your shopping bag is empty 💕"
-    );
-
+    alert("Your shopping bag is empty 💕");
     return;
   }
 
-
   const total = cart.reduce(
-    (sum, item) =>
-      sum + (item.price * item.quantity),
+    (sum, item) => sum + (item.price * item.quantity),
     0
   );
 
-
-  const customerName =
-    prompt("Enter your full name 💕");
+  const customerName = prompt("Enter your full name 💕");
 
   if (!customerName) {
-
-    alert(
-      "Please enter your name to continue 💕"
-    );
-
+    alert("Please enter your name to continue 💕");
     return;
   }
 
-
-  const phone =
-    prompt("Enter your phone number 📱");
+  const phone = prompt("Enter your phone number 📱");
 
   if (!phone) {
-
-    alert(
-      "Please enter your phone number to continue 💕"
-    );
-
+    alert("Please enter your phone number to continue 💕");
     return;
   }
 
-
-  const location =
-    prompt("Enter your delivery location 📍");
+  const location = prompt("Enter your delivery location 📍");
 
   if (!location) {
-
-    alert(
-      "Please enter your delivery location to continue 💕"
-    );
-
+    alert("Please enter your delivery location to continue 💕");
     return;
   }
 
-
-  const paymentNumber =
-    "0502755816";
-
+  const paymentNumber = "0502755816";
 
   alert(
-
-    "Hi " + customerName + "! 🎀\n\n" +
-
-    "Your order total is GH₵" +
+    "Your total is GH₵" +
     total.toFixed(2) +
-
     ".\n\n" +
-
     "Please send GH₵" +
     total.toFixed(2) +
-
     " to:\n\n" +
-
     "Telecel Cash 📱\n" +
     paymentNumber +
-
     "\n\n" +
-
-    "After sending the money, tap OK " +
-    "to enter your transaction/reference number."
-
+    "After sending the money, tap OK to enter your transaction/reference number."
   );
 
-
-  const reference =
-    prompt(
-      "Enter your Telecel Cash transaction/reference number:"
-    );
-
+  const reference = prompt(
+    "Enter your Telecel Cash transaction/reference number:"
+  );
 
   if (!reference) {
-
     alert(
       "Checkout cancelled. Please enter your transaction/reference number 💕"
     );
-
     return;
   }
 
+  let orderItems = "";
+
+  cart.forEach((item) => {
+    orderItems +=
+      "• " +
+      item.name +
+      " x" +
+      item.quantity +
+      " — GH₵" +
+      (item.price * item.quantity).toFixed(2) +
+      "\n";
+  });
+
+  const message =
+    "🛍️ *NEW MHER CEDIS ORDER* 🎀\n\n" +
+    "*Customer:* " + customerName + "\n" +
+    "*Phone:* " + phone + "\n" +
+    "*Delivery location:* " + location + "\n\n" +
+    "*ORDER:*\n" +
+    orderItems +
+    "\n*TOTAL:* GH₵" + total.toFixed(2) +
+    "\n\n" +
+    "*Telecel Cash:* " + paymentNumber +
+    "\n" +
+    "*Payment reference:* " + reference +
+    "\n\n" +
+    "Please confirm payment and process this order. 💕";
+
+  const whatsappURL =
+    "https://wa.me/233502755816?text=" +
+    encodeURIComponent(message);
 
   alert(
-
-    "ORDER RECEIVED! 🎀💕\n\n" +
-
-    "Customer: " +
-    customerName +
-
-    "\nPhone: " +
-    phone +
-
-    "\nDelivery location: " +
-    location +
-
-    "\n\nTotal: GH₵" +
-    total.toFixed(2) +
-
-    "\n\nPayment reference:\n" +
-    reference +
-
-    "\n\nThank you for shopping with Mhercedis! 🛍️💕\n\n" +
-
-    "We will confirm your Telecel Cash payment and process your order."
-
+    "Order received! 🎀💕\n\n" +
+    "Your order details will now open in WhatsApp."
   );
 
+  window.location.href = whatsappURL;
 }
 </script>
 </body>
