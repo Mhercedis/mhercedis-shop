@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mhercedis 💕</title>
+  <title>Mhercedis Shop 🎀</title>
   <style>
     * {
       box-sizing: border-box;
@@ -17,12 +17,12 @@
     }
     header {
       background: #f8b6c8;
-      padding: 25px 20px;
+      padding: 28px 20px;
       text-align: center;
     }
     header h1 {
-      font-size: 34px;
       color: white;
+      font-size: 35px;
     }
     header p {
       color: white;
@@ -35,23 +35,23 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
     nav a {
-      text-decoration: none;
       color: #d95f87;
+      text-decoration: none;
       font-weight: bold;
-      margin: 0 12px;
+      margin: 0 10px;
     }
     .hero {
       text-align: center;
       padding: 50px 20px;
     }
     .hero h2 {
-      font-size: 32px;
       color: #d95f87;
+      font-size: 32px;
       margin-bottom: 15px;
     }
     .hero p {
-      font-size: 17px;
       margin-bottom: 25px;
+      font-size: 17px;
     }
     .shop-button {
       display: inline-block;
@@ -63,9 +63,9 @@
       font-weight: bold;
     }
     .section {
-      padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
+      padding: 40px 20px;
     }
     .section-heading {
       text-align: center;
@@ -96,8 +96,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 70px;
       background: #ffe3ec;
+      font-size: 70px;
     }
     .product-info {
       padding: 20px;
@@ -122,9 +122,6 @@
       font-size: 15px;
       font-weight: bold;
       cursor: pointer;
-    }
-    .add-button:active {
-      transform: scale(0.98);
     }
     .cart {
       background: white;
@@ -193,8 +190,8 @@
       padding: 25px;
       border-radius: 18px;
       line-height: 1.7;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
       text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
     }
     footer {
       background: #d95f87;
@@ -208,268 +205,232 @@
         flex-direction: column;
         align-items: flex-start;
       }
-      .quantity {
-        margin-top: 5px;
-      }
-      .remove {
-        margin-top: 5px;
-      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Mhercedis 🎀</h1>
-    <p>Cute little things made for you 💕</p>
-  </header>
-  <nav>
-    <a href="#shop">Shop</a>
-    <a href="#about">About</a>
-    <a href="#bag">Bag 🛍️</a>
-  </nav>
-  <section class="hero">
-    <h2>Welcome to Mhercedis 💕</h2>
-    <p>Shop cute, feminine and lovely items you'll adore.</p>
-    <a href="#shop" class="shop-button">Shop now 🎀</a>
-  </section>
-  <section class="section" id="shop">
-    <div class="section-heading">
-      <span>OUR COLLECTION</span>
-      <h2>Shop our cute items 💕</h2>
-    </div>
-    <div class="products">
-      <div class="product">
-        <div class="product-image">👜</div>
-        <div class="product-info">
-          <div class="product-name">Cute Tote Bag</div>
-          <div class="product-price">GH₵ 80</div>
-          <button
-            class="add-button"
-            onclick="addToCart('Cute Tote Bag', 80)">
-            Add to bag
-          </button>
-        </div>
-      </div>
-      <div class="product">
-        <div class="product-image">🎀</div>
-        <div class="product-info">
-          <div class="product-name">Cute Hair Bow</div>
-          <div class="product-price">GH₵ 35</div>
-          <button
-            class="add-button"
-            onclick="addToCart('Cute Hair Bow', 35)">
-            Add to bag
-          </button>
-        </div>
-      </div>
-      <div class="product">
-        <div class="product-image">💎</div>
-        <div class="product-info">
-          <div class="product-name">Mini Jewelry Set</div>
-          <div class="product-price">GH₵ 70</div>
-          <button
-            class="add-button"
-            onclick="addToCart('Mini Jewelry Set', 70)">
-            Add to bag
-          </button>
-        </div>
-      </div>
-      <div class="product">
-        <div class="product-image">🧸</div>
-        <div class="product-info">
-          <div class="product-name">Cute Keychain</div>
-          <div class="product-price">GH₵ 30</div>
-          <button
-            class="add-button"
-            onclick="addToCart('Cute Keychain', 30)">
-            Add to bag
-          </button>
-        </div>
+<header>
+  <h1>Mhercedis 🎀</h1>
+  <p>Cute little things made for you 💕</p>
+</header>
+<nav>
+  <a href="#shop">Shop</a>
+  <a href="#about">About</a>
+  <a href="#bag">Bag 🛍️</a>
+</nav>
+<section class="hero">
+  <h2>Welcome to Mhercedis 💕</h2>
+  <p>Shop cute, feminine and lovely items you'll adore.</p>
+  <a href="#shop" class="shop-button">Shop now 🎀</a>
+</section>
+<section class="section" id="shop">
+  <div class="section-heading">
+    <span>OUR COLLECTION</span>
+    <h2>Shop our cute items 💕</h2>
+  </div>
+  <div class="products">
+    <div class="product">
+      <div class="product-image">👜</div>
+      <div class="product-info">
+        <div class="product-name">Cute Tote Bag</div>
+        <div class="product-price">GH₵ 80</div>
+        <button
+          class="add-button"
+          onclick="addToCart('Cute Tote Bag', 80)">
+          Add to bag
+        </button>
       </div>
     </div>
-    <div class="cart" id="bag">
-      <h2>Your shopping bag 🛍️</h2>
-      <div id="cartItems">
-        <p>Your bag is empty 💕</p>
+    <div class="product">
+      <div class="product-image">🎀</div>
+      <div class="product-info">
+        <div class="product-name">Cute Hair Bow</div>
+        <div class="product-price">GH₵ 35</div>
+        <button
+          class="add-button"
+          onclick="addToCart('Cute Hair Bow', 35)">
+          Add to bag
+        </button>
       </div>
-      <div class="cart-total">
-        <span>Total</span>
-        <strong>
-          GH₵ <span id="total">0.00</span>
-        </strong>
+    </div>
+    <div class="product">
+      <div class="product-image">💎</div>
+      <div class="product-info">
+        <div class="product-name">Mini Jewelry Set</div>
+        <div class="product-price">GH₵ 70</div>
+        <button
+          class="add-button"
+          onclick="addToCart('Mini Jewelry Set', 70)">
+          Add to bag
+        </button>
       </div>
-      <button class="checkout" onclick="checkout()">
-        Continue to checkout
-      </button>
     </div>
-  </section>
-  <section class="section" id="about">
-    <div class="section-heading">
-      <span>GET TO KNOW US</span>
-      <h2>About Mhercedis 💕</h2>
+    <div class="product">
+      <div class="product-image">🧸</div>
+      <div class="product-info">
+        <div class="product-name">Cute Keychain</div>
+        <div class="product-price">GH₵ 30</div>
+        <button
+          class="add-button"
+          onclick="addToCart('Cute Keychain', 30)">
+          Add to bag
+        </button>
+      </div>
     </div>
-    <p class="about">
-      Welcome to Mhercedis 🎀 — your cute little shop for feminine,
-      stylish and lovely everyday items. Everything is picked with love
-      to add a little extra sweetness to your day. 💕
-    </p>
-  </section>
-  <footer>
-    <p>© 2026 Mhercedis 🎀</p>
-    <p>Made with love 💕</p>
-  </footer>
-  <script>
-    let cart = [];
-    function addToCart(name, price) {
-      const existing = cart.find(
-        item => item.name === name
-      );
-      if (existing) {
-        existing.quantity++;
-      } else {
-        cart.push({
-          name: name,
-          price: price,
-          quantity: 1
-        });
-      }
-      updateCart();
-    }
-    function changeQuantity(index, amount) {
-      cart[index].quantity += amount;
-      if (cart[index].quantity <= 0) {
-        cart.splice(index, 1);
-      }
-      updateCart();
-    }
-    function removeItem(index) {
-      cart.splice(index, 1);
-      updateCart();
-    }
-    function updateCart() {
-      const cartItems =
-        document.getElementById("cartItems");
-      const totalElement =
-        document.getElementById("total");
-      if (cart.length === 0) {
-        cartItems.innerHTML =
-          "<p>Your bag is empty 💕</p>";
-        totalElement.textContent = "0.00";
-        return;
-      }
-      let total = 0;
-      cartItems.innerHTML = "";
-      cart.forEach((item, index) => {
-        total += item.price * item.quantity;
-        const div =
-          document.createElement("div");
-        div.className = "cart-item";
-        div.innerHTML = `
-          <div>
-            <strong>${item.name}</strong>
-            <br>
-            GH₵ ${item.price.toFixed(2)} each
-          </div>
-          <div class="quantity">
-            <button
-              onclick="changeQuantity(${index}, -1)">
-              −
-            </button>
-            <span>${item.quantity}</span>
-            <button
-              onclick="changeQuantity(${index}, 1)">
-              +
-            </button>
-          </div>
-          <button
-            class="remove"
-            onclick="removeItem(${index})">
-            Remove
-          </button>
-        `;
-        cartItems.appendChild(div);
+  </div>
+  <div class="cart" id="bag">
+    <h2>Your shopping bag 🛍️</h2>
+    <div id="cartItems">
+      <p>Your bag is empty 💕</p>
+    </div>
+    <div class="cart-total">
+      <span>Total</span>
+      <strong>
+        GH₵ <span id="total">0.00</span>
+      </strong>
+    </div>
+    <button class="checkout" onclick="checkout()">
+      Continue to checkout
+    </button>
+  </div>
+</section>
+<section class="section" id="about">
+  <div class="section-heading">
+    <span>GET TO KNOW US</span>
+    <h2>About Mhercedis 💕</h2>
+  </div>
+  <p class="about">
+    Welcome to Mhercedis 🎀 — your cute little shop for feminine,
+    stylish and lovely everyday items. Everything is picked with love
+    to add a little extra sweetness to your day. 💕
+  </p>
+</section>
+<footer>
+  <p>© 2026 Mhercedis 🎀</p>
+  <p>Made with love 💕</p>
+</footer>
+<script>
+  let cart = [];
+  function addToCart(name, price) {
+    const existing =
+      cart.find(item => item.name === name);
+    if (existing) {
+      existing.quantity++;
+    } else {
+      cart.push({
+        name: name,
+        price: price,
+        quantity: 1
       });
-      totalElement.textContent =
-        total.toFixed(2);
     }
-    async function checkout() {
-      if (cart.length === 0) {
-        alert(
-          "Your shopping bag is empty 💕"
-        );
-        return;
-      }
-      const email =
-        prompt("Enter your email address 💕");
-      if (!email) {
-        return;
-      }
-      const total = cart.reduce(
+    updateCart();
+  }
+  function changeQuantity(index, amount) {
+    cart[index].quantity += amount;
+    if (cart[index].quantity <= 0) {
+      cart.splice(index, 1);
+    }
+    updateCart();
+  }
+  function removeItem(index) {
+    cart.splice(index, 1);
+    updateCart();
+  }
+  function updateCart() {
+    const cartItems =
+      document.getElementById("cartItems");
+    const totalElement =
+      document.getElementById("total");
+    if (cart.length === 0) {
+      cartItems.innerHTML =
+        "<p>Your bag is empty 💕</p>";
+      totalElement.textContent = "0.00";
+      return;
+    }
+    let total = 0;
+    cartItems.innerHTML = "";
+    cart.forEach((item, index) => {
+      total +=
+        item.price * item.quantity;
+      const div =
+        document.createElement("div");
+      div.className = "cart-item";
+      div.innerHTML = `
+        <div>
+          <strong>${item.name}</strong>
+          <br>
+          GH₵ ${item.price.toFixed(2)} each
+        </div>
+        <div class="quantity">
+          <button
+            onclick="changeQuantity(${index}, -1)">
+            −
+          </button>
+          <span>${item.quantity}</span>
+          <button
+            onclick="changeQuantity(${index}, 1)">
+            +
+          </button>
+        </div>
+        <button
+          class="remove"
+          onclick="removeItem(${index})">
+          Remove
+        </button>
+      `;
+      cartItems.appendChild(div);
+    });
+    totalElement.textContent =
+      total.toFixed(2);
+  }
+  function checkout() {
+    if (cart.length === 0) {
+      alert(
+        "Your shopping bag is empty 💕"
+      );
+      return;
+    }
+    const total =
+      cart.reduce(
         (sum, item) =>
           sum + (item.price * item.quantity),
         0
       );
-      try {
-        const response =
-          await fetch("/api/paystack", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-              email: email,
-              amount:
-                Math.round(total * 100)
-            })
-          });
-        const data =
-          await response.json();
-        if (
-          data.status &&
-          data.data &&
-          data.data.authorization_url
-        ) {
-          window.location.href =
-            data.data.authorization_url;
-          return;
-        }
-        /*
-          If Paystack does not start,
-          show Telecel Cash instructions.
-        */
-        const paymentNumber =
-          "0502755816";
-        const paymentMessage =
-          "Please send GH₵" +
-          total.toFixed(2) +
-          " to Telecel Cash number " +
-          paymentNumber +
-          ". After sending the money, enter your transaction/reference number.";
-        alert(paymentMessage);
-        const reference =
-          prompt(
-            "Enter your Telecel Cash transaction/reference number:"
-          );
-        if (!reference) {
-          alert(
-            "Please enter your transaction/reference number 💕"
-          );
-          return;
-        }
-        alert(
-          "Order received! 💕\n\n" +
-          "Payment reference: " +
-          reference +
-          "\n\n" +
-          "We will confirm your Telecel Cash payment and process your order."
-        );
-      } catch (error) {
-        console.error(error);
-        alert(
-          "Something went wrong. Please try again 💕"
-        );
-      }
+    const paymentNumber =
+      "0502755816";
+    alert(
+      "Your total is GH₵" +
+      total.toFixed(2) +
+      ".\n\n" +
+      "Please send the payment to:\n\n" +
+      "Telecel Cash 📱\n" +
+      paymentNumber +
+      "\n\n" +
+      "After sending the money, tap OK " +
+      "to enter your transaction/reference number."
+    );
+    const reference =
+      prompt(
+        "Enter your Telecel Cash transaction/reference number:"
+      );
+    if (!reference) {
+      alert(
+        "Checkout cancelled. Please enter your transaction/reference number 💕"
+      );
+      return;
     }
-  </script>
+    alert(
+      "Order received! 🎀💕\n\n" +
+      "Total: GH₵" +
+      total.toFixed(2) +
+      "\n\n" +
+      "Payment reference:\n" +
+      reference +
+      "\n\n" +
+      "Thank you for shopping with Mhercedis! 🛍️💕\n\n" +
+      "We will confirm your Telecel Cash payment and process your order."
+    );
+  }
+</script>
 </body>
 </html>
